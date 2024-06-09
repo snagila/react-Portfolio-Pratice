@@ -1,4 +1,5 @@
 import React from "react";
+import pip from "../assets/profiePic.png";
 
 const HomePage = () => {
   return (
@@ -17,7 +18,7 @@ const HomePage = () => {
           </a>
         </div>
         <div className="image">
-          <img src="" width="100%" alt="" />
+          <img src={pip} width="100%" alt="" />
         </div>
       </div>
       <section className="banner container flex">
