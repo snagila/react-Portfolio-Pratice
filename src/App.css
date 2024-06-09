@@ -1,0 +1,352 @@
+style.css html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.joti-one-regular {
+  font-family: "Joti One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* root variables */
+:root {
+  --color-orange: orangered;
+  --color-dark: #2a2a2a;
+
+  --body-bg: rgb(188, 230, 253);
+  --text-color: var(--color-dark);
+  --border-color: var(--color-dark);
+
+  /* for dark mode */
+  --dark-bg: var(--color-dark);
+  --dark-text-color: rgb(255, 255, 255);
+  --dark-border-color: rgb(255, 255, 255);
+
+  --shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.625);
+}
+
+/* darkmode toggler */
+.dark-mode-toggler {
+  position: fixed;
+  top: 7rem;
+  left: 3rem;
+}
+.dark-mode-toggler:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+/* making dark mode working */
+#darkMode:checked + .wrapper {
+  --body-bg: var(--dark-bg);
+  --text-color: var(--dark-text-color);
+  --border-color: var(--dark-border-color);
+}
+.wrapper {
+  background: var(--body-bg);
+  min-height: 100vh;
+}
+/* NAV BAR */
+header {
+  background: var(--body-bg);
+  box-shadow: var(--shadow);
+  top: 0;
+  position: sticky;
+}
+header .header {
+  justify-content: space-between;
+}
+.title_left {
+  display: flex;
+  justify-content: space-between;
+}
+.title_left .name h1 {
+  margin: 0;
+  margin-right: 15px;
+}
+.title_left .name h2 {
+  margin: 0;
+  margin-right: 2px;
+}
+.line {
+  background: red;
+  border: 2px solid red;
+  padding: 1px;
+  height: 4rem;
+  align-self: center;
+}
+.title_left h3 {
+  align-self: center;
+  margin-left: 10px;
+}
+.title_right ul {
+  list-style: none;
+  gap: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.title_right ul li:hover {
+  transform: scale(1.5);
+  color: red;
+  transition: all 0.3s;
+}
+
+/* HERO SECTION */
+.hero-section {
+  background: var(--color-orange);
+  margin: 5rem auto;
+}
+.hero {
+  display: grid;
+  grid-template-areas: "hd hi";
+}
+.hero-disc {
+  grid-area: hd;
+}
+.hero-image {
+  grid-area: hi;
+}
+.hero-disc > span {
+  font-weight: bolder;
+  font-size: 2em;
+}
+.hero-disc button {
+  background: #000;
+  color: white;
+  border-radius: 2rem;
+  padding: 10px 2em;
+  border: none;
+  font-size: large;
+}
+.hero-disc button:hover {
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+
+/*  BANNER */
+
+.banner {
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-bottom: 10rem;
+}
+.logo {
+  height: 5rem;
+  width: 5rem;
+  background: var(--color-orange);
+  /* border-radius: 3em; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 3em;
+  font-size: 40px;
+}
+.awards .logo-disc {
+  margin-left: 2rem;
+  align-items: center;
+}
+.awards .logo-disc span {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+.awards .logo-disc p {
+  font-size: 1rem;
+}
+
+/* SKILLS */
+.skills {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.skill-title p {
+  border-bottom: 2px solid red;
+  font-weight: bolder;
+  font-size: 3em;
+}
+.skill-list {
+  gap: 7em;
+}
+.skill-list i {
+  font-size: 4rem;
+}
+.skill-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+/* MY PROJECTS */
+.project-title span {
+  font-size: 2em;
+  border-bottom: 2px solid red;
+}
+.project-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.projects {
+  display: grid;
+  grid-template-areas:
+    "p1 p2"
+    "p3 p4";
+  gap: 4em;
+}
+
+.my-projects .project-links {
+  justify-content: center;
+  padding: 1em;
+  gap: 5px;
+}
+.my-projects h3 {
+  margin: 0;
+}
+.my-projects .disc {
+  padding: 10px;
+  margin-left: 40px;
+}
+.project-1 {
+  grid-area: p1;
+  background: rgba(79, 125, 174, 0.498);
+  border: 2px solid black;
+}
+.project-2 {
+  grid-area: p2;
+  background: white;
+  border: 2px solid black;
+  background: rgba(79, 125, 174, 0.498);
+}
+.project-3 {
+  grid-area: p3;
+  background: white;
+  border: 2px solid black;
+  background: rgba(79, 125, 174, 0.498);
+}
+.project-4 {
+  grid-area: p4;
+  background: white;
+  border: 2px solid black;
+  background: rgba(79, 125, 174, 0.498);
+}
+
+/* ABOUT ME */
+.about-me {
+  background: lightgreen;
+  margin: 40px 0;
+}
+.about_title span {
+  font-weight: bold;
+  font-size: 30px;
+  justify-content: center;
+  border-bottom: 2px solid red;
+}
+.about_title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.about-me .content {
+  justify-content: center;
+
+  flex-direction: column;
+}
+.about-me .img {
+  margin-bottom: -5px;
+}
+
+/* CONTACT */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact_title span {
+  border-bottom: 2px solid red;
+}
+.contact-icons {
+  font-size: 1.5em;
+  gap: 30px;
+}
+.email-section {
+  background: black;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  margin-bottom: 1em;
+  border-radius: 20px;
+  font-size: large;
+}
+.send {
+  height: 30px;
+  width: 30px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
+}
+/* FOOTER */
+footer {
+  background: black;
+  padding: 3em;
+  color: white;
+  text-align: center;
+}
+.goup {
+  position: fixed;
+  color: black;
+
+  bottom: 70px;
+  right: 100px;
+  height: 40px;
+  width: 40px;
+  background: orangered;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* @media (max-width: 1285px) {
+  .hero-section {
+    justify-content: space-between;
+  }
+  .image img {
+    margin: 0px !important;
+    width: 100%;
+    margin-top: 77.5px !important;
+  }
+
+  .image {
+    margin: 0px !important;
+  } */
+
+/* .image {
+  width: 25%;
+  margin: -5.3rem;
+}
+.image img {
+  margin-left: 10em; */
